@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe for My Dog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"
+
+    
+    <!--style-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" >
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Titan+One&family=Lora&display=swap" rel="stylesheet">
+  
+    <style>
+        img {
+  border: none; /* 테두리 제거 */
+  box-shadow: none; /* 그림자 제거 */
+}
+
+.shadow-drop-2-center{-webkit-animation:shadow-drop-2-center .4s cubic-bezier(.25,.46,.45,.94) both;animation:shadow-drop-2-center .4s cubic-bezier(.25,.46,.45,.94) both}
+       
+        .timeline {
+          display: flex;
+          flex-direction: column;
+          align-items: center; /* 자식 요소들을 수평 중앙 정렬 */
+          justify-content: center; /* 수직 정렬 추가 */
+          margin: 0 auto; /* 타임라인 자체를 화면 가운데로 */
+          padding: 20px;
+          max-width: 600px;
+        }
+      
+        .timeline-event {
+          text-align: center; /* 텍스트 중앙 정렬 */
+          margin-bottom: 40px;
+          width: 80%; /* 이벤트 박스의 너비를 설정 */
+        }
+      
+        .timeline-date {
+          font-weight: bold;
+          color: #2e7d32;
+          background-color: #dcedc8;
+          padding: 5px 10px;
+          border-radius: 5px;
+          display: inline-block;
+          margin-bottom: 10px;
+        }
+      
+        .timeline-content {
+          background-color: #ffffff;
+          padding: 15px;
+          border-radius: 10px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          text-align: center; /* 내용 내부 텍스트도 가운데 정렬 */
+        }
+        #targetDiv {  opacity: 0;
+            transition: 4s;
+        
+    
+        }
+        @keyframes text-pop-up-top {
+      0% {
+          transform: translateY(50px);
+          opacity: 0;
+      }
+      100% {
+          transform: translateY(0);
+          opacity: 1;
+      }
+  }
+        .text-pop-up-top{-webkit-animation:text-pop-up-top 3s cubic-bezier(.25,.46,.45,.94) both;animation:text-pop-up-top 3s cubic-bezier(.25,.46,.45,.94) both}
+      </style>
+
+   
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container" >
+             <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="로고" style="width: 200px; height: auto;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-menu" aria-controls="navbarNav" aria-expanded="false" aria-label="카테고리">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="nav-menu">
+                <ul class="navbar-nav ms-auto my-2">
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutme.html">About me</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reco.html">Recommended ingredients</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="recoreci.html">Recommended recipes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="recobook.html">Recommended related books</a>
+                    </li>
+                </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+     <!-- Bootstrap JS 추가 -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+  <!--첫 화면-->
+  <div class="container">
+    <div class="text-center hero-title"><h2 id="targetDiv3"class="fw-bold">세상에서 가장 사랑하는 나의 강아지</div>
+    <div class="row content">
+    <div class="text-center">
+            <img id="targetDiv5"src="images/a.1.jpg" alt="Cute My Dog" style="width: 400px; height:auto; margin-bottom: 20px">
+        </div>
+    <div class="text-center" >
+        <pre>
+
+
+        </pre>
+            <h3 id="targetDiv2" style="font-size : 20px; color: #6b8e23;"  ><br>2016년, 초등학교 6학년 여름방학에 <br> 만난 아주 작고 예쁜 나의 강아지, 샤샤</h3>
+           <pre>
+
+
+
+
+           </pre>
+           <div id="carouselExampleCaptions" class="carousel slide">
+            <!-- Indicators -->
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6" aria-label="Slide 7"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="7" aria-label="Slide 8"></button>
+              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="8" aria-label="Slide 9"></button>
+             
+
+            </div>
+          
+        <!-- Carousel items -->
+        <div class="carousel-inner">
+              <!-- First slide -->
+              <div class="carousel-item active">
+                <div style="width: 100%; height: 500px; background-color: #6b8e23;; display: flex; justify-content: center; align-items: center;">
+                  <img src="images/a.2.jpg" alt="개린이1" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>천방지축 2개월 개린이 시절</h5>
+                </div>
+              </div>
+          
+              <!-- Second slide -->
+              <div class="carousel-item">
+                <div style="width: 100%; height: 500px; background-color: #6b8e23;; display: flex; justify-content: center; align-items: center;">
+                  <img src="images/a.3.jpg" alt="개린이2" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>이가 나던 시기라 모든 걸 다 씹고 뜯던 아기 시절</h5>
+                </div>
+              </div>
+            
+               <!-- 3 slide -->
+               <div class="carousel-item">
+                <div style="width: 100%; height: 500px; background-color: #6b8e23; display: flex; justify-content: center; align-items: center;">
+                  <img src="images/a.4.jpg" alt="개린이2" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>알러지로 한참 고생하던 1살</h5>
+                </div>
+               </div>
+          
+               <!-- 4 slide -->
+               <div class="carousel-item">
+                <div style="width: 100%; height: 500px; background-color: #6b8e23; display: flex; justify-content: center; align-items: center;">
+                  <img src="images/a.5.jpg" alt="개린이2" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>나의 중2병을 견뎌준 3살의 샤샤</h5>
+                </div>
+               </div>
+           
+               <!-- 5 -->
+               <div class="carousel-item">
+                <div style="width: 100%; height: 500px; background-color: #6b8e23; display: flex; justify-content: center; align-items: center;">
+                  <img src="images/a.6.jpg" alt="개린이2" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>힘든 고등학교 시절을 버티게 해준 나의 유일한 존재였던 5살의 샤샤</h5>
+                </div>
+               </div>
+       
+               <!-- 6 slide -->
+               <div class="carousel-item">
+                <div style="width: 100%; height: 500px; background-color: #6b8e23: flex; justify-content: center; align-items: center;">
+                  <img src="images/a.7.jpg" alt="개린이2" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>나의 입시 종료와 동시에 슬개골 수술을 받았던 7살의 샤샤</h5>
+                </div>
+              </div>
+            
+               <!-- 7slide -->
+               <div class="carousel-item">
+                <div style="width: 100%; height: 500px; background-color: #6b8e23; display: flex; justify-content: center; align-items: center;">
+                  <img src="images/a.8.jpg" alt="개린이2" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                  <h5> 수술후 엄청난 속도로 회복해서 의사쌤도 놀란 우리 8살 샤샤의 생일기념 사진</h5>
+                </div>
+              </div>
+         
+
+
+                <!-- 8 -->
+           <div class="carousel-item">
+             <div style="width: 100%; height: 500px; background-color: #6b8e23; display: flex; justify-content: center; align-items: center;">
+               <img src="images/a.9.jpg" alt="개린이2" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+             </div>
+             <div class="carousel-caption d-none d-md-block">
+                <h5> 옆모습도 예쁜 강아지</h5>
+             </div>
+            </div>
+
+        </div>
+          
+    
+
+
+            
+
+          
+            <!-- Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+
+          </div>
+          
+          <pre>
+
+  
+
+
+
+
+
+
+
+
+
+          </pre>
+
+          <div  class="text-center" >
+            <h3 id="targetDiv" style="font-size : 30px; color: #6b8e23;"  ><br>"저는 샤샤와 함께한 모든 순간들이" <br> 너무 행복하고,<br> 하루하루 함께하는 <br>모든 시간이 너무 소중해요."</h3>
+            <script>
+                let observer= new IntersectionObserver((e)=>{
+                    e.forEach((박스)=>{
+                      if(박스.isIntersecting){
+                        박스.target.style.opacity=1;
+                      }
+                      else{
+                        박스.target.style.opacity=0;
+
+                      }
+
+                    });
+                });
+                let targetDivs = document.querySelectorAll('#targetDiv, #targetDiv5, #targetDiv2,#targetDiv3'); // 여러 요소 선택
+                targetDivs.forEach((div) => {
+                div.style.opacity = 0; // 초기 상태를 투명하게 설정
+                div.style.transition = 'opacity 2s'; // 부드러운 전환 효과
+                observer.observe(div); // 각각의 요소를 관찰
+                 });
+
+
+              
+
+            </script>
+            <pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </pre>
+            
+            <h3 id="pop1" class="fw-bold " style="font-size : 30px; color: #6b8e23;"  >하지만<br>언제나 건강하던 샤샤에게<br> 건강 적신호가 왔어요.</h3>
+            <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                let observer = new IntersectionObserver((entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("text-pop-up-top"); // 애니메이션 클래스 추가
+                        } else {
+                            entry.target.classList.remove("text-pop-up-top"); // 애니메이션 클래스 제거
+                        }
+                    });
+                });
+            
+                let targetDivs = document.querySelectorAll('#pop1, #pop2, #pop3, #pop4'); // 여러 요소 선택
+                targetDivs.forEach((div) => {
+                    div.style.opacity = 0; // 초기 상태를 투명하게 설정
+                    observer.observe(div); // 각각의 요소를 관찰
+                });
+            });
+          </script>
+            <pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+           </pre>
+
+        <div style="background-color:#6b8e23; padding:40px 0; text-align: center;">
+          <div class="timeline">
+            <div class="timeline-event">
+              <div class="timeline-date">2023년 12월</div>
+              <div class="timeline-content">
+                <p>산책 중 <span style="background-color:#fffc4e; padding: 2px 4px"> 혈뇨</span> 증상으로 병원 방문.</p>
+                <p>가득 찬 <span style="background-color:#fffc4e; padding: 2px 4px">방광슬러지와 방광염</span> 진단.</p>
+              </div>
+            </div>
+            <div class="timeline-event">
+              <div class="timeline-date">2024년 1월</div>
+              <div class="timeline-content">
+                <p>낫지 않는 <span style="background-color:#fffc4e; padding: 2px 4px">방광 슬러지</span>와 <span style="background-color:#fffc4e; padding: 2px 4px">방광염</span>으로 <span style="background-color:#fffc4e; padding: 2px 4px">항생제 내성</span>이 생김.</p>
+              </div>
+            </div>
+            <div class="timeline-event">
+                <div class="timeline-date">2024년 2월</div>
+                <div class="timeline-content">
+                  <p>겨우 맞는 항생제를 발견 후 방광염은 완치
+                    하지만 <span style="background-color:#fffc4e; padding: 2px 4px">방광슬러지</span>는 그대로 없어지지 않음.</p>
+                </div>
+            </div>
+            <div class="timeline-event">
+                <div class="timeline-date">2024년 4월</div>
+                <div class="timeline-content">
+                  <p><span style="background-color:#fffc4e; padding: 2px 4px">항생제 장기복용</span>으로 <span style="background-color:#fffc4e; padding: 2px 4px">면역력 저하</span>가 발생한 탓인지
+                    <span style="background-color:#fffc4e; padding: 2px 4px">세균성, 곰팡이성 피부염 발생</span></p>
+                </div>
+            </div>
+            <img src="images/a.10.jpg" alt="피부염 샤샤" style="max-height: 100%; max-width: 100%;  width: auto; height: 300px;">
+            <pre>
+
+            </pre>
+            <div class="timeline-event">
+                <div class="timeline-date">2024년 5월</div>
+                <div class="timeline-content">
+                  <p>1달 반 동안
+                    약용 샴푸와 항생제 복용<br> 연고를 통해  피부염 완치
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-event">
+                <div class="timeline-date">2024년 7월</div>
+                <div class="timeline-content">
+                  <p><span style="background-color:#fffc4e; padding: 2px 4px">장염</span>으로 점액변
+                    병원에서 장염약 처방 후 3일만에 완치
+                    
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-event">
+                <div class="timeline-date">2024년 8월</div>
+                <div class="timeline-content">
+                  <p>수분 부족과 장기적인 항생제 복용(장기적인 항생제 섭취는 장내 유익균까지 없앰)으로 인한
+                    <span style="background-color:#fffc4e; padding: 2px 4px">변비</span>                    
+                    </p>
+                </div>
+            </div>
+            <div class="timeline-event">
+                <div class="timeline-date">2024년 9월</div>
+                <div class="timeline-content">
+                  <p>다시 <span style="background-color:#fffc4e; padding: 2px 4px">혈뇨</span>로 병원 방문.<br>
+                    방광염은 아니지만 <span style="background-color:#fffc4e; padding: 2px 4px">방광 슬러지가 가득</span>해서
+                    <br>방광벽을 자극해서 혈뇨가 나오는 것으로 예측.
+                    <br><span style="background-color:#fffc4e; padding: 2px 4px">신장에 작은 결석 1개</span>                                   
+                    </p>
+                </div>
+            </div>
+            <h3 class="fw-bold" style="font-size : 36px; color: #6b8e23;"  >
+                <span style="background-color:#fffc4e; padding: 2px 4px"> 방광슬러지</span>
+                <span style="background-color:#fffc4e; padding: 2px 4px"> 변비 </span>
+                <span style="background-color:#fffc4e; padding: 2px 4px"> 신장 결석</span>
+    
+            </h3>
+            <h3 class="fw-bold" style="font-size : 30px; color: #f5f4e5;" >
+                <br>
+                이 모든 질병은 음수량이 부족해서 생기는 
+                <br>
+                증상이에요.
+                <br>
+                그리고 피부염, 장염, 방광염도 
+                <br>
+                몸의 염증 수치가 높다는 것!
+                <br>
+            </h3>
+        </div>
+
+  
+
+        <div style="background-color:#f5f4e5; padding:40px 0; text-align: center;">
+            <div class="text-center" >
+                <h3 class="fw-bold" style="font-size : 38px; color: #6b8e23;"  >
+                <pre>
+
+
+
+
+
+
+                </pre>
+                    <br> 음수량을 위해서 어떻게 해야 할까요?
+                    <br> 그건 바로 "<span id="pop2" style="color:#ADD8E6;">식습관 개선</span>"
+                    <br> 원래 물을 잘 안마시기 때문에
+                    <br> 방광 슬러지/ 결석/ 변비가 나타나는 것!
+                
+                <pre>
+
+
+
+
+
+
+                </pre>
+                </h3>
+            </div>
+        </div>
+
+        <div style="background-color:#6b8e23; padding:40px 0; text-align: center;">
+       
+            <h3 class="fw-bold" style="color:#f5f4e5; font-size : 30px;">
+그렇기 때문에 강아지가 주식으로 먹는
+<br> 건사료는
+<br>
+<span style="background-color: #fffc4e; color:black;"> 수분 함량도 매우 낮을 뿐만 아니라
+<br>출처와 원산지가 명확하지 않은 식재료를 이용해 가공적으로 만들었기 때문에
+인스턴트 음식과 같아요. 
+<br>장기적으로 먹으면 몸의 염증수치가 올라갈 수 있어요.
+<br>
+
+특히 음수량이 부족한 친구들에게 사료는
+더욱 체내 순환을 원활하게 하지 않아요. </span>
+<pre>
+
+
+</pre>
+            </h3>
+        </div>
+
+        <div style="background-color:#f5f4e5; padding:40px 0; text-align: center;">
+            <h3 class="fw-bold" style="font-size : 38px; color: #6b8e23;"  >
+                <pre>
+
+
+
+
+
+
+
+                    
+
+                </pre>
+                저희 샤샤는 이 식습관 개선으로<br>
+                <span id="pop4" style="border-bottom: 2px solid rgb(240, 3, 3); display: inline;">10개월 동안 낫지 않았던 방광 슬러지와 변비가</span> 
+                <br>
+                <pre>
+
+
+
+
+
+
+
+
+
+
+
+                </pre>
+                <span id="pop3" style="color:#8ccfe6;">"단 2주"</span>만에 완치 되었어요. 
+                <br>
+                <pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </pre>
+                또한 식욕과 활력이 더 좋아지고,
+                <br>
+                체내 염증이 줄어들었는지
+                <br> 
+                발사탕과 피부 트러블 문제도 많이 개선되고
+                <br>
+                방광염도 다 낫게 되었어요.
+            </h3>
+            <pre>
+
+
+
+
+
+
+
+
+            
+            </pre>
+        </div>
+
+        <div style="background-color:#6b8e23; padding:40px 0; text-align: center;">
+            <h3  class="fw-bold" style="font-size : 38px; color: #f5f4e5;">
+                우리 강아지를 더 건강하고 행복하게 만들어주는
+
+            </h3>
+            <h1  style="font-size : 38px; color: #f5f4e5;">
+                recipe for my dog
+            </h1>
+        </div>
+
+
+
+
+
+          
+              
+
+
+
+
+
+
+</body>
